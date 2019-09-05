@@ -20,10 +20,24 @@ spec:
         prometheus.io/scrape: 'true'
     spec:
       containers:
-      - name: metrics-demod
+      - name: metrics-demo
         image: quay.io/brice/metrics-demo:master-a1560c8
         ports:
         - containerPort: 3000
+        readinessProbe:
+          httpGet:
+            path: /readyz
+            port: 9898
+          initialDelaySeconds: 1
+          periodSeconds: 5
+          failureThreshold: 1
+        livenessProbe:
+          httpGet:
+            path: /healthz
+            port: 9898
+          initialDelaySeconds: 1
+          periodSeconds: 10
+          failureThreshold: 2
         resources:
           requests:
             memory: "32Mi"
