@@ -1,0 +1,1 @@
+{"jobID":"f81e378c-2696-2fc2-e4a0-0a4adccd00cb","spec":{"type":"policy","cause":{"Message":"","User":"Mark Fidler \u003cmark.fidler@gmail.com\u003e"},"spec":{"dev:deployment/podinfo":{"add":{"automated":"true"},"remove":null}}},"result":null}
