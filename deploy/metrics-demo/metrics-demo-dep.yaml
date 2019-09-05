@@ -21,10 +21,7 @@ spec:
     spec:
       containers:
       - name: metrics-demod
-        image: quay.io/brice/metrics-demo:master-a1560c8
-        command:
-        - ./metrics-demo
-        - --port=9898
+        image: quay.io/brice/metrics-demo:v4-subscription-service
         ports:
         - containerPort: 3000
         resources:
